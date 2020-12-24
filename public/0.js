@@ -426,23 +426,7 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "row" }),
           _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-12" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-success",
-                  attrs: { type: "submit" },
-                  on: {
-                    click: function($event) {
-                      return _vm.onSubmit()
-                    }
-                  }
-                },
-                [_vm._v("Salvar")]
-              )
-            ])
-          ]),
+          _vm._m(1),
           _vm._v(" "),
           _c("pre", [_vm._v(_vm._s(this.dados))])
         ])
@@ -457,7 +441,21 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12" }, [
-        _c("h1", [_vm._v("Cadastro de Alunos")])
+        _c("h1", [_vm._v("Cadastro de Alunos1")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c(
+          "button",
+          { staticClass: "btn btn-success", attrs: { type: "submit" } },
+          [_vm._v("Salvar")]
+        )
       ])
     ])
   }

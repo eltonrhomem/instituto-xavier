@@ -1,13 +1,13 @@
 <template>
 <div class="row form-group">
-    <div class="col-md-2"> 
+    <div class="col-md-2">
         <layout />
     </div>
     <form @submit.prevent="onSubmit">
         <div class="col-md-10 ">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Cadastro de Alunos</h1>
+                    <h1>Cadastro de Alunos1</h1>
                 </div>
             </div>
             <div class="row">
@@ -47,7 +47,7 @@
                         <option value=""></option>
                         <option value="M">M</option>
                         <option value="F">F</option>
-                    
+
                     </select>
                 </div>
             </div>
@@ -70,19 +70,19 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-success" @click="onSubmit()">Salvar</button>
+                    <button type="submit" class="btn btn-success" >Salvar</button>
                 </div>
 
             </div>
             <pre>{{this.dados}}</pre>
-            
+
         </div>
 
 
     </form>
 
 </div>
-  
+
 </template>
 
 <script>
@@ -116,7 +116,7 @@ export default {
 
         async onSubmit() {
             console.log('montei= ',this.form)
-           
+
             await repositorioAPIAluno.salvarAluno({...this.form}).then(
                 (response) => {
                     this.dados = response.data;
@@ -124,9 +124,9 @@ export default {
             );
            // console.log('a= ', a);
             //await repositorioAPIAluno.
-            
-            
-            
+
+
+
             /* await axios.get('http://127.0.0.1:8000/api/alunos/13')
                             .then( response => {
                                 a =  response.data

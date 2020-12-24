@@ -53,7 +53,7 @@ class Handler extends ExceptionHandler
            // dd($exception->validator::erros());
             return response()->json([
                                      'resultado' => [],
-                                     'mensagem'  =>  $exception->validator->erros()->getMessages(),
+                                     'mensagem'  =>  collect($exception->errors()),
                                      'status' => 'ERROR'
                                     ], 422);
         }

@@ -54,11 +54,11 @@ class Aluno extends Model
 
     }
 
-    public function setDatanascimentoAttribute($value)
-    {
-        $data = Carbon::createFromFormat('d/m/Y' ,$value);
-        $data = $data->format('Y-m-d');
-        $this->attributes['datanascimento'] = $data;
+    //public function setDatanascimentoAttribute($value)
+    //{
+       // $data = Carbon::createFromFormat('d/m/Y' ,$value);
+       // $data = $data->format('Y-m-d');
+        //$this->attributes['datanascimento'] = $data;
 
-    }
+    //}
 }

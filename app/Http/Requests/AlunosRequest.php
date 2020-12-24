@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class AlunosRequest extends FormRequest
 {
@@ -29,7 +30,7 @@ class AlunosRequest extends FormRequest
             'nomeguerra'=> 'required|max:100',
             'datanascimento' => 'required',
             'tiposanguineo' => 'required',
-            'sexo' => "required|in:[M,F]",
+            'sexo' => ['required', Rule::in(['M', 'F'])],
         ];
     }
 

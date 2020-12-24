@@ -52,7 +52,7 @@ class AlunosController extends Controller
 
     public function salvar(AlunosRequest $request, $id = null)
     {
-        $validated = $request->validated();
+        //$validated = $request->validated();
         //dd($request->all());
         $input = $request->all();
         $input['id'] = $id;
